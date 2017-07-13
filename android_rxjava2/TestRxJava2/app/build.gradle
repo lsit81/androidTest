@@ -21,6 +21,28 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Rxjava (https://github.com/ReactiveX/RxJava)
+    compile "io.reactivex.rxjava2:rxjava:2.1.1"
+
+    // Retrofit (http://square.github.io/retrofit/)
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+
+    // okHttp (http://square.github.io/okhttp/)
+    compile 'com.squareup.okhttp3:okhttp:3.8.1'
+
+    // RxAndroid (https://github.com/ReactiveX/RxAndroid)
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+
+    // Butter Knife (http://jakewharton.github.io/butterknife/)
+    compile 'com.jakewharton:butterknife:8.7.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.7.0'
+
+    // LeakCanary (https://github.com/square/leakcanary)
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.1'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
